@@ -11,6 +11,6 @@ git add .
 git commit -m "first commit"
 # add the remote (github cloud) repo
 # we include the token in the url to avoid auth later on
-git remote add origin "https://henrynester:$TOKEN@github.com/henrynester/$REPOSITORY_NAME.git"
+git remote add origin "https://henrynester:$(cat ~/.git_token)@github.com/henrynester/$REPOSITORY_NAME.git"
 # push the first commit
 git push --set-upstream origin master
