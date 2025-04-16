@@ -16,6 +16,9 @@ sudo apt install regolith-desktop regolith-session-flashback regolith-look-lasca
 sudo apt install i3xrocks-battery i3xrocks-cpu-usage i3xrocks-memory i3xrocks-net-traffic i3xrocks-temp i3xrocks-time
 # select theme lascaille
 sudo apt install regolith-look lascaille
+# remove ugly lockscreen wallpaper
+echo "regolith.lockscreen.wallpaper.file: /usr/share/regolith-look/lascaille/ESP_016895_1525_desktop.jpg" >> ~/.config/regolith3/Xresources
+
 regolith-look set lascaille
 # restart to use
 
@@ -41,6 +44,9 @@ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microso
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/keyrings/microsoft-archive-keyring.gpg
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/microsoft-archive-keyring.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 # extension list?
+
+# KiCAD
+sudo apt install kicad
 
 #Docker
 # Add Docker's official GPG key:

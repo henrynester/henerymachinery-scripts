@@ -1,0 +1,26 @@
+instructions for setting up VIM
+
+Install vim-plug (plugin manager for vim)
+Place file here: https://github.com/junegunn/vim-plug/blob/master/plug.vim
+into ~/.vim/autoload/plug.vim
+
+Edit .vimrc to ask vim-plug to install coc (LSP for multiple languages)
+top of file:
+call plug#begin()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
+Reload .vimrc and run :PlugInstall to install coc
+
+coc has some system dependencies: apt install npm
+
+To install language support:
+:CocInstall coc-pyright coc-clangd
+for coc-clangd, we also need to :CocCommand clangd.install
+other langs:
+https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+
+To get keybindings for coc, append to .vimrc the coc config example:
+https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.vim
+The default Coc floating window background makes it impossible to read. Add to .vimrc:
+highlight! link CocFloating Normal

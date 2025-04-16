@@ -1,0 +1,13 @@
+https://kleinembedded.com/stm32-without-cubeide-part-1-the-bare-necessities/
+https://github.com/libopencm3/libopencm3-template
+
+1. get drivers for stlink programmer/debugger tool
+sudo apt install stlink-tools
+compiler: gcc-arm-none-eabi
+debugger: gdb-arm-none-eabi
+
+2. check connected devices
+stlink-info --probe 
+
+3. install platformio ext in vscode
+
